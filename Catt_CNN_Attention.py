@@ -355,7 +355,7 @@ class DeepLearningModel:
 
 if __name__ == '__main__':
     # initializer: tf.contrib.layers.variance_scaling_initializer(), tf.contrib.layers.xavier_initializer(uniform=True, seed=7)
-    deep_learning_model = DeepLearningModel(num_filter=[100], num_dense=0, num_conv_set=1, use_attention=0, attention_MLP=0, initializer=tf.contrib.layers.xavier_initializer(uniform=True, seed=7),
+    deep_learning_model = DeepLearningModel(num_filter=[100], num_dense=0, num_conv_set=1, use_attention=1, attention_MLP=0, initializer=tf.contrib.layers.xavier_initializer(uniform=True, seed=7),
                                         kernel_size=[2], strides=1, activation=tf.nn.relu, learning_rate=0.001, padding='valid', epochs=20, batch_size=128, num_fold_training='All', val_threshold=0.0001,
                                             make_balance_dataset=0, make_balance_batch=1, alpha=0.8, weighted_logits=[1., 1.], val_metric='recall')
     filename = 'kfold_dataset_DL_light&heavy_mean_std_OSRM_2class.pickle'
